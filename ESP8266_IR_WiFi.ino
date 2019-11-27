@@ -101,7 +101,7 @@ void setup(void){
    
   Serial.begin(115200);
   
-  wifiManager.autoConnect("AutoConnectAP");
+  wifiManager.autoConnect("iQQSmartHome");
   WiFi.config(ip, gateway, subnet);
   Serial.println("");
   Serial.print("Connected to ");
@@ -179,4 +179,7 @@ void setup(void){
 
 void loop(void){
   server.handleClient();
+  if (WiFi.status() != WL_CONNECTED) {
+    wifiManager.autoConnect("iQQSmartHome");
+  }
 }
