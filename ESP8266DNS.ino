@@ -173,7 +173,7 @@ void setup(void){
 
 void loop(void){
   server.handleClient();
-  if (WiFi.status() != WL_CONNECTED) {
-    wifiManager.autoConnect("iQQSmartHome");
-  }
+  //if (WiFi.status() != WL_CONNECTED) {
+    //wifiManager.autoConnect("iQQSmartHome");
+ // }
 }
